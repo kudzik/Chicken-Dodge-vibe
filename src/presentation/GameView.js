@@ -21,6 +21,16 @@ export class GameView {
             strokeThickness: 2
         });
         
+        // Power-up legend
+        this.powerUpLegend = this.scene.add.text(600, 20, 
+            'Power-ups:\n🔴 Dodatkowe życie\n🟡 Nieśmiertelność\n🟢 Podwójne punkty\n🔵 Przyspieszenie\n🟣 Niewidzialność', {
+            fontSize: '14px',
+            fill: '#ffffff',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 1
+        });
+        
         this.livesText = this.scene.add.text(20, 55, 'Lives: ❤❤❤', {
             fontSize: '24px',
             fill: '#ff4444',
@@ -99,6 +109,21 @@ export class GameView {
 
         // Update chickens
         this.updateChickens(gameState.chickens);
+        
+        // Update power-ups if they exist
+        if (gameState.powerUps) {
+            this.updatePowerUps(gameState.powerUps);
+        }
+        
+        // Update player appearance based on power-ups
+        if (this.playerSprite && gameState.activePowerUps && gameState.activePowerUps.includes('invincibility')) {
+            this.playerSprite.setFillStyle(0xffff00); // Yellow tint
+        } else if (this.playerSprite && gameState.activePowerUps && gameState.activePowerUps.includes('invisibility')) {
+            this.playerSprite.setAlpha(0.5); // Semi-transparent
+        } else if (this.playerSprite) {
+            this.playerSprite.setFillStyle(0x00ff00); // Green (original color)
+            this.playerSprite.setAlpha(1);
+        }
     }
 
     updateChickens(chickens) {
@@ -137,6 +162,47 @@ export class GameView {
                     this.chickenSprites[index].setFillStyle(0xff6600); // Orange for normal
                     this.chickenSprites[index].setSize(30, 30); // Fixed size
                 }
+            }
+        });
+    }
+    
+    updatePowerUps(powerUps) {
+        if (!powerUps) return;
+        
+        // Initialize array if needed
+        if (!this.powerUpSprites) {
+            this.powerUpSprites = [];
+        }
+        
+        // Remove excess sprites
+        while (this.powerUpSprites.length > powerUps.length) {
+            const sprite = this.powerUpSprites.pop();
+            sprite.destroy();
+        }
+        
+        // Add missing sprites (circles with white border)
+        while (this.powerUpSprites.length < powerUps.length) {
+            const circle = this.scene.add.circle(0, 0, 12, 0x00ffff);
+            circle.setStrokeStyle(2, 0xffffff); // White border
+            this.powerUpSprites.push(circle);
+        }
+        
+        // Different colors for different types
+        const colors = {
+            'extra_life': 0xff0000,     // Red - Dodatkowe życie
+            'invincibility': 0xffff00,  // Yellow - Nieśmiertelność
+            'double_points': 0x00ff00,  // Green - Podwójne punkty
+            'speed_boost': 0x0000ff,    // Blue - Przyspieszenie
+            'invisibility': 0xff00ff    // Magenta - Niewidzialność
+        };
+        
+        // Update positions and colors
+        powerUps.forEach((powerUp, index) => {
+            if (this.powerUpSprites[index]) {
+                this.powerUpSprites[index].x = powerUp.x;
+                this.powerUpSprites[index].y = powerUp.y;
+                this.powerUpSprites[index].setVisible(powerUp.active);
+                this.powerUpSprites[index].setFillStyle(colors[powerUp.type] || 0x00ffff);
             }
         });
     }

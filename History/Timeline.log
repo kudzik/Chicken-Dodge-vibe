@@ -75,3 +75,9 @@
 [2024-12-19 17:00:00] [Dodano] plik docs/MECHANICS.md - Szczegółowa dokumentacja mechanik gry
 [2024-12-19 17:00:00] [Zmieniono] plik docs/API.md - Dodano nowe typy kurczaków i system mnożnika
 [2024-12-19 17:00:00] [Zmieniono] plik tests/Multiplier.test.js - Poprawiono testy mnożnika
+[2024-12-19 17:05:00] [Dodano] plik src/domain/PowerUp.js - System power-upów z 5 typami pozytywnych efektów
+[2024-12-19 17:05:00] [Zmieniono] plik src/application/GameService.js - Dodano spawning i logikę power-upów
+[2024-12-19 17:05:00] [Zmieniono] plik src/domain/Player.js - Dodano wsparcie dla przyspieszenia
+[2024-12-19 17:05:00] [Zmieniono] plik src/presentation/GameViewModel.js - Przekazywanie przyspieszenia do gracza
+[2024-12-19 17:05:00] [Zmieniono] plik src/presentation/GameView.js - Renderowanie power-upów i efektów wizualnych
+[2024-12-19 17:05:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt Sprint 3 jako wykonany

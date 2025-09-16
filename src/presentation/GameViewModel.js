@@ -9,7 +9,8 @@ export class GameViewModel {
     }
 
     handleInput(direction) {
-        this.gameService.player.move(direction);
+        const speedBoost = this.gameService.isPlayerFast();
+        this.gameService.player.move(direction, speedBoost);
     }
 
     update() {

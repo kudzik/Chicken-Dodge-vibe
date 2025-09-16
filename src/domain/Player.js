@@ -6,8 +6,9 @@ export class Player {
         this.score = 0;
     }
 
-    move(direction) {
-        const speed = 6;
+    move(direction, speedBoost = false) {
+        const baseSpeed = 6;
+        const speed = speedBoost ? baseSpeed * 1.5 : baseSpeed;
         this.x += direction * speed;
         this.x = Math.max(40, Math.min(760, this.x));
     }

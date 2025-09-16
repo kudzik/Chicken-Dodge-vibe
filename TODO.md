@@ -80,12 +80,18 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 
 ### Faza 1: Power-upy i ich efekty
 
-- [ ] ✍️ Zaimplementować pozytywne power-up  
+- [x] ✍️ Zaimplementować pozytywne power-up  
   - dodatkowe życie  
   - chwilowa niesmiertelność
   - podwójne punkty
   - szybsze ruchy postaci
-- niewidzialność
+  - niewidzialność
+  ✅ Power-upy są różnorodne i mają unikalne ikony  
+  ✅ Power-up pojawia się losowo, aktywuje efekt i znika po 5 sekundach lub podczas kolizji
+⏱️ ~4h
+
+### Faza 2: Power-upy i ich efekty
+
 - [ ] ✍️ Zaimplementować negatywne power-up
   - spowolnienie ruchów postaci
   - odwrotne sterowanie
@@ -96,11 +102,13 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
   ✅ Power-up pojawia się losowo, aktywuje efekt i znika po 5 sekundach lub podczas kolizji
   ⏱️ ~4h
 
+### Faza 3: Power-upy i ich efekty
+
 - [ ] ✍️ Dodać logikę aktywacji i dezaktywacji power-upów wraz z efektami wizualnymi  
   ✅ Po aktywacji power-up wpływa na rozgrywkę przez zaplanowany czas, efekt jest widoczny  
   ⏱️ ~3h
 
-### Faza 2: System skórek postaci i kurczaków
+### Faza 4: System skórek postaci i kurczaków
 
 - [ ] ✍️ Utworzyć mechanizm odblokowywania i wyboru skórki (minimum 3 skórki)  
   ✅ Użytkownik może wybrać skórkę w menu, zmiana widoczna w grze  
