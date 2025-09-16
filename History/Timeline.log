@@ -94,3 +94,11 @@
 [2024-12-19 17:25:00] [Zmieniono] plik src/domain/Player.js - Dodano obsługę spowolnienia ruchu
 [2024-12-19 17:25:00] [Zmieniono] plik src/presentation/GameView.js - Dodano kolory i efekty wizualne negatywnych power-upów
 [2024-12-19 17:25:00] [Zmieniono] plik TODO.md - Oznaczono drugi punkt Sprint 3 jako wykonany
+[2024-12-19 17:30:00] [Zmieniono] plik src/presentation/GameView.js - Dodano czarne ramki dla negatywnych power-upów
+[2024-12-19 17:30:00] [Zmieniono] plik src/presentation/GameView.js - Rozszerzono legendę o negatywne power-upy
+[2024-12-19 17:35:00] [Zmieniono] plik src/presentation/GameView.js - Dodano wyświetlanie aktywnych power-upów
+[2024-12-19 17:35:00] [Zmieniono] plik src/presentation/GameView.js - Dodano efekty wizualne dla punktów z power-upami
+[2024-12-19 17:35:00] [Zmieniono] plik TODO.md - Oznaczono trzeci punkt Sprint 3 jako wykonany
+[2024-12-19 17:40:00] [Dodano] plik tests/NegativePowerUps.test.js - Testy negatywnych power-upów
+[2024-12-19 17:40:00] [Dodano] plik tests/PlayerControls.test.js - Testy sterowania z power-upami
+[2024-12-19 17:40:00] [Dodano] plik tests/PowerUpEffects.test.js - Testy integracyjne efektów power-upów
