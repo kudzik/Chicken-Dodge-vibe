@@ -1,0 +1,18 @@
+[2024-12-19 15:30:00] [Dodano] plik README.md - Utworzono podstawowy README z opisem projektu, strukturą i instrukcjami
+[2024-12-19 15:30:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt jako wykonany
+[2024-12-19 15:35:00] [Dodano] plik package.json - Konfiguracja projektu z Phaser 3, Vite i Jest
+[2024-12-19 15:35:00] [Dodano] plik index.html - Podstawowy HTML z kontenerem na grę
+[2024-12-19 15:35:00] [Dodano] plik src/main.js - Szkielet aplikacji Phaser 3 z pustym ekranem
+[2024-12-19 15:35:00] [Dodano] plik vite.config.js - Konfiguracja Vite dla developmentu
+[2024-12-19 15:35:00] [Zmieniono] plik TODO.md - Oznaczono drugi punkt jako wykonany
+[2024-12-19 15:40:00] [Dodano] plik src/domain/Player.js - Encja gracza z pozycją, życiami i punktami
+[2024-12-19 15:40:00] [Dodano] plik src/domain/Chicken.js - Encja kurczaka z logiką spadania i kolizji
+[2024-12-19 15:40:00] [Dodano] plik src/application/GameService.js - Serwis gry z logiką biznesową
+[2024-12-19 15:40:00] [Dodano] plik src/presentation/GameViewModel.js - ViewModel łączący logikę z widokiem
+[2024-12-19 15:40:00] [Dodano] plik src/presentation/GameView.js - Widok gry z renderowaniem Phaser
+[2024-12-19 15:40:00] [Dodano] plik src/infrastructure/InputHandler.js - Obsługa wejścia klawiatury i dotyku
+[2024-12-19 15:40:00] [Zmieniono] plik src/main.js - Integracja architektury MVVM z Phaser 3
+[2024-12-19 15:40:00] [Zmieniono] plik TODO.md - Oznaczono trzeci punkt jako wykonany
+[2024-12-19 15:45:00] [Zmieniono] plik src/infrastructure/InputHandler.js - Poprawiono sterowanie dotykowe dla płynności
+[2024-12-19 15:45:00] [Zmieniono] plik src/domain/Player.js - Zwiększono prędkość ruchu gracza
+[2024-12-19 15:45:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt Fazy 2 jako wykonany
