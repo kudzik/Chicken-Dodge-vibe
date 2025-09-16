@@ -5,14 +5,14 @@ describe('Chicken', () => {
   let chicken;
 
   beforeEach(() => {
-    chicken = new Chicken(100, 0);
+    chicken = new Chicken(100, -30);
   });
 
   describe('initialization', () => {
     test('should initialize with correct values', () => {
       expect(chicken.x).toBe(100);
-      expect(chicken.y).toBe(0);
-      expect(chicken.speed).toBe(2);
+      expect(chicken.y).toBe(-30);
+      expect(chicken.speed).toBe(3);
       expect(chicken.active).toBe(true);
     });
   });
@@ -20,13 +20,13 @@ describe('Chicken', () => {
   describe('movement', () => {
     test('should move down when updated', () => {
       chicken.update();
-      expect(chicken.y).toBe(2);
+      expect(chicken.y).toBe(-27);
     });
 
     test('should not move when inactive', () => {
       chicken.active = false;
       chicken.update();
-      expect(chicken.y).toBe(0);
+      expect(chicken.y).toBe(-30);
     });
   });
 

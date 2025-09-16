@@ -38,3 +38,8 @@
 [2024-12-19 16:20:00] [Zmieniono] plik src/application/GameService.js - Dodano śledzenie zdobytych punktów dla feedbacku
 [2024-12-19 16:20:00] [Zmieniono] plik src/presentation/GameView.js - Dodano animowany feedback dla zdobytych punktów
 [2024-12-19 16:20:00] [Zmieniono] plik TODO.md - Oznaczono punkt naliczania punktów jako wykonany
+[2024-12-19 16:25:00] [Dodano] plik tests/GameService.extended.test.js - Rozszerzone testy dla GameService
+[2024-12-19 16:25:00] [Dodano] plik tests/GameViewModel.test.js - Testy jednostkowe dla GameViewModel
+[2024-12-19 16:25:00] [Dodano] plik tests/Player.extended.test.js - Rozszerzone testy dla Player
+[2024-12-19 16:25:00] [Zmieniono] plik tests/Chicken.test.js - Poprawiono testy zgodnie z nową implementacją
+[2024-12-19 16:25:00] [Zmieniono] plik tests/GameViewModel.test.js - Poprawiono testy bez użycia jest.fn()
