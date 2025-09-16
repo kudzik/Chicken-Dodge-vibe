@@ -7,6 +7,7 @@ Casual arcade game gdzie gracz unika spadających kurczaków.
 **Chicken Dodge** to hyper-casual gra arcade typu endless runner. Gracz steruje postacią, która musi unikać spadających z góry kurczaków, zdobywając punkty za każdego unikniętego przeciwnika.
 
 ### Kluczowe funkcje
+
 - Sterowanie klawiaturą (←→) i dotykiem
 - 3 typy kurczaków z różnymi zachowaniami
 - System punktów, życia i mnożników
@@ -64,9 +65,15 @@ npm run test:coverage
 
 ## Status rozwoju
 
-🚧 **W trakcie rozwoju** - Sprint 1: Podstawowy rdzeń rozgrywki
+✅ **Sprint 1 ukończony** - Podstawowy rdzeń rozgrywki
 
 Zobacz [TODO.md](./TODO.md) dla szczegółów postępu.
+
+## Dokumentacja
+
+- [Architektura](./docs/ARCHITECTURE.md) - Opis architektury systemu
+- [Instrukcja uruchomienia](./docs/SETUP.md) - Jak uruchomić projekt
+- [API](./docs/API.md) - Dokumentacja klas i metod
 
 ## Licencja
 

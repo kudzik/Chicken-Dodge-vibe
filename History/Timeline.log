@@ -43,3 +43,8 @@
 [2024-12-19 16:25:00] [Dodano] plik tests/Player.extended.test.js - Rozszerzone testy dla Player
 [2024-12-19 16:25:00] [Zmieniono] plik tests/Chicken.test.js - Poprawiono testy zgodnie z nową implementacją
 [2024-12-19 16:25:00] [Zmieniono] plik tests/GameViewModel.test.js - Poprawiono testy bez użycia jest.fn()
+[2024-12-19 16:30:00] [Dodano] plik docs/ARCHITECTURE.md - Dokumentacja architektury Clean Architecture + MVVM
+[2024-12-19 16:30:00] [Dodano] plik docs/SETUP.md - Instrukcja instalacji i uruchomienia projektu
+[2024-12-19 16:30:00] [Dodano] plik docs/API.md - Dokumentacja API klas i metod
+[2024-12-19 16:30:00] [Zmieniono] plik README.md - Dodano linki do dokumentacji i status ukończenia Sprint 1
+[2024-12-19 16:30:00] [Zmieniono] plik TODO.md - Oznaczono ostatni punkt jako wykonany - Sprint 1 ukończony

@@ -6,7 +6,7 @@
   ✅ Repozytorium dostępne, README zawiera opis projektu i strukturę  
   ⏱️ ~1h
 
-- [x] ✍️ Ustalić szkielet aplikacji z Phaser 3 
+- [x] ✍️ Ustalić szkielet aplikacji z Phaser 3
   ✅ Aplikacja uruchamia się z pustym ekranem i poprawnym buildem  
   ⏱️ ~3h
 
@@ -48,6 +48,52 @@
   ✅ Testy wykonują się bez błędów i pokrywają podstawową logikę  
   ⏱️ ~3h
 
-- [ ] ✍️ Dokumentacja podstawowa architektury i instrukcja uruchomienia  
+- [x] ✍️ Dokumentacja podstawowa architektury i instrukcja uruchomienia  
   ✅ Dokumentacja dostępna w repozytorium i zweryfikowana przez lidera  
   ⏱️ ~2h
+
+***
+
+Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
+
+## Faza 1: Rozszerzenie mechaniki kurczaków
+
+- [ ] ✍️ Zaimplementować spadającego kurczaka szybkiego (z przyspieszeniem w locie)  
+  ✅ Kurczak pojawia się i przyspiesza podczas spadania, widoczny efekt animacji przyspieszenia  
+  ⏱️ ~4h
+
+- [ ] ✍️ Zaimplementować kurczaka chaotycznego (zmieniającego kierunek lotu w trakcie spadania)  
+  ✅ Kurczak zmienia losowo kierunek spadania, zachowanie jest rozpoznawalne i płynne  
+  ⏱️ ~4h
+
+- [ ] ✍️ Zaimplementować kurczaka mutant (zmieniającego rozmiar w locie)  
+  ✅ Kurczak zmienia rozmiar podczas spadania, zmiana jest płynna i zauważalna przez gracza  
+  ⏱️ ~4h
+
+## Faza 2: Mnożnik punktów i mechanika życia
+
+- [ ] ✍️ Dodać licznik serii uników dla mnożnika punktów  
+  ✅ Mnożnik rośnie z każdym kolejnym unikniętym kurczakiem, jest resetowany przy trafieniu  
+  ⏱️ ~3h
+
+- [ ] ✍️ Ulepszyć logikę utraty życia i game over  
+  ✅ Postać ma 3 życia na start, utrata życia przy trafieniu, wyświetlenie komunikatu game over przy zerze życia  
+  ⏱️ ~3h
+
+## Faza 3: Aktualizacja HUD i UI
+
+- [ ] ✍️ Rozszerzyć HUD o wyświetlanie mnożnika punktów i aktualnych żyć  
+  ✅ HUD pokazuje aktualne punkty, życia i mnożnik w czasie rzeczywistym  
+  ⏱️ ~2h
+
+## Faza 4: Testy i dokumentacja
+
+- [ ] ✍️ Napisać testy jednostkowe dla nowej logiki kurczaków, mnożnika i życia  
+  ✅ Testy pokrywają zachowania wszystkich typów kurczaków oraz mechaniki mnożnika i życia  
+  ⏱️ ~3h
+
+- [ ] ✍️ Zaktualizować dokumentację techniczną opisując nowe mechaniki  
+  ✅ Dokumentacja dostępna i zatwierdzona na repozytorium  
+  ⏱️ ~2h
+
+---
