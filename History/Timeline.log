@@ -70,3 +70,8 @@
 [2024-12-19 16:55:00] [Zmieniono] plik src/application/GameService.js - Dodano system mnożnika punktów oparty na serii uników
 [2024-12-19 16:55:00] [Zmieniono] plik src/presentation/GameView.js - Dodano wyświetlanie mnożnika w HUD
 [2024-12-19 16:55:00] [Zmieniono] plik TODO.md - Oznaczono punkt mnożnika jako wykonany
+[2024-12-19 17:00:00] [Dodano] plik tests/Multiplier.test.js - Testy jednostkowe dla systemu mnożnika
+[2024-12-19 17:00:00] [Zmieniono] plik docs/ARCHITECTURE.md - Zaktualizowano o nowe typy kurczaków i mnożnik
+[2024-12-19 17:00:00] [Dodano] plik docs/MECHANICS.md - Szczegółowa dokumentacja mechanik gry
+[2024-12-19 17:00:00] [Zmieniono] plik docs/API.md - Dodano nowe typy kurczaków i system mnożnika
+[2024-12-19 17:00:00] [Zmieniono] plik tests/Multiplier.test.js - Poprawiono testy mnożnika

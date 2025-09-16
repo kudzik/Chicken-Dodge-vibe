@@ -3,6 +3,7 @@
 ## Domain Classes
 
 ### Player
+
 ```javascript
 class Player {
   constructor(x = 400, y = 550)
@@ -13,6 +14,7 @@ class Player {
 ```
 
 ### Chicken
+
 ```javascript
 class Chicken {
   constructor(x, y = -30)
@@ -22,20 +24,57 @@ class Chicken {
 }
 ```
 
+### FastChicken
+
+```javascript
+class FastChicken extends Chicken {
+  constructor(x, y = -30)
+  update()             // Ruch z przyspieszeniem
+  // Dziedziczy: isOffScreen(), checkCollision()
+}
+```
+
+### ChaoticChicken
+
+```javascript
+class ChaoticChicken extends Chicken {
+  constructor(x, y = -30)
+  update()             // Ruch chaotyczny poziomo
+  // Dziedziczy: isOffScreen(), checkCollision()
+}
+```
+
+### MutantChicken
+
+```javascript
+class MutantChicken extends Chicken {
+  constructor(x, y = -30)
+  update()             // Ruch z mutacją rozmiaru
+  checkCollision(player) // Kolizja dostosowana do rozmiaru
+}
+```
+
 ## Application Services
 
 ### GameService
+
 ```javascript
 class GameService {
-  spawnChicken()       // Tworzy nowego kurczaka
-  updateGame()         // Główna pętla gry
-  getGameState()       // Zwraca stan gry
+  spawnChicken()       // Tworzy nowego kurczaka (losowy typ)
+  updateGame()         // Główna pętla gry z mnożnikiem
+  getGameState()       // Zwraca stan gry + mnożnik
+  
+  // Właściwości:
+  streakCount          // Licznik serii uników
+  multiplier           // Mnożnik punktów (1-5)
+  lastScoreGain        // Ostatnio zdobyte punkty
 }
 ```
 
 ## Presentation Layer
 
 ### GameViewModel
+
 ```javascript
 class GameViewModel {
   handleInput(direction) // Obsługuje wejście
@@ -45,6 +84,7 @@ class GameViewModel {
 ```
 
 ### GameView
+
 ```javascript
 class GameView {
   create()             // Tworzy elementy UI
@@ -55,6 +95,7 @@ class GameView {
 ## Infrastructure
 
 ### InputHandler
+
 ```javascript
 class InputHandler {
   setupInput()         // Konfiguruje wejście
