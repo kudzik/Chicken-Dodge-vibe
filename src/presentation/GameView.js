@@ -98,7 +98,7 @@ export class GameView {
             this.chickenSprites.push(sprite);
         }
 
-        // Update positions and colors based on type
+        // Update positions, colors and sizes based on type
         chickens.forEach((chicken, index) => {
             if (this.chickenSprites[index]) {
                 this.chickenSprites[index].x = chicken.x;
@@ -108,8 +108,18 @@ export class GameView {
                 // Different colors for different types
                 if (chicken.type === 'fast') {
                     this.chickenSprites[index].setFillStyle(0xff0000); // Red for fast
+                    this.chickenSprites[index].setSize(30, 30); // Fixed size
+                } else if (chicken.type === 'chaotic') {
+                    this.chickenSprites[index].setFillStyle(0x9900ff); // Purple for chaotic
+                    this.chickenSprites[index].setSize(30, 30); // Fixed size
+                } else if (chicken.type === 'mutant') {
+                    this.chickenSprites[index].setFillStyle(0x00ff00); // Green for mutant
+                    // Only mutants change size
+                    const size = chicken.currentSize || 30;
+                    this.chickenSprites[index].setSize(size, size);
                 } else {
                     this.chickenSprites[index].setFillStyle(0xff6600); // Orange for normal
+                    this.chickenSprites[index].setSize(30, 30); // Fixed size
                 }
             }
         });

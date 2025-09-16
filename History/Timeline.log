@@ -53,3 +53,17 @@
 [2024-12-19 16:35:00] [Zmieniono] plik src/presentation/GameView.js - Dodano różne kolory dla typów kurczaków
 [2024-12-19 16:35:00] [Zmieniono] plik src/domain/Chicken.js - Dodano typ 'normal' do podstawowego kurczaka
 [2024-12-19 16:35:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt Sprint 2 jako wykonany
+[2024-12-19 16:40:00] [Dodano] plik src/domain/ChaoticChicken.js - Kurczak chaotyczny z losową zmianą kierunku
+[2024-12-19 16:40:00] [Zmieniono] plik src/application/GameService.js - Dodano spawning chaotycznych kurczaków (25% każdy typ)
+[2024-12-19 16:40:00] [Zmieniono] plik src/presentation/GameView.js - Dodano fioletowy kolor dla chaotycznych kurczaków
+[2024-12-19 16:40:00] [Zmieniono] plik TODO.md - Oznaczono drugi punkt Sprint 2 jako wykonany
+[2024-12-19 16:45:00] [Dodano] plik src/domain/MutantChicken.js - Kurczak mutant z dynamiczną zmianą rozmiaru
+[2024-12-19 16:45:00] [Zmieniono] plik src/application/GameService.js - Dodano spawning mutant kurczaków (20% każdy typ)
+[2024-12-19 16:45:00] [Zmieniono] plik src/presentation/GameView.js - Dodano zielony kolor i dynamiczny rozmiar dla mutantów
+[2024-12-19 16:45:00] [Zmieniono] plik TODO.md - Oznaczono trzeci punkt Sprint 2 jako wykonany
+[2024-12-19 16:47:00] [Zmieniono] plik src/presentation/GameView.js - Poprawiono aby tylko mutant kurczaki zmieniały rozmiar
+[2024-12-19 16:50:00] [Dodano] plik tests/FastChicken.test.js - Testy jednostkowe dla FastChicken
+[2024-12-19 16:50:00] [Dodano] plik tests/ChaoticChicken.test.js - Testy jednostkowe dla ChaoticChicken
+[2024-12-19 16:50:00] [Dodano] plik tests/MutantChicken.test.js - Testy jednostkowe dla MutantChicken
+[2024-12-19 16:50:00] [Zmieniono] plik tests/GameService.test.js - Rozszerzono o testy różnych typów kurczaków
+[2024-12-19 16:50:00] [Zmieniono] plik tests/MutantChicken.test.js - Poprawiono test kolizji

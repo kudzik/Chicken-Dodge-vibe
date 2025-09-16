@@ -62,11 +62,11 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
   ✅ Kurczak pojawia się i przyspiesza podczas spadania, widoczny efekt animacji przyspieszenia  
   ⏱️ ~4h
 
-- [ ] ✍️ Zaimplementować kurczaka chaotycznego (zmieniającego kierunek lotu w trakcie spadania)  
+- [x] ✍️ Zaimplementować kurczaka chaotycznego (zmieniającego kierunek lotu w trakcie spadania)  
   ✅ Kurczak zmienia losowo kierunek spadania, zachowanie jest rozpoznawalne i płynne  
   ⏱️ ~4h
 
-- [ ] ✍️ Zaimplementować kurczaka mutant (zmieniającego rozmiar w locie)  
+- [x] ✍️ Zaimplementować kurczaka mutant (zmieniającego rozmiar w locie)  
   ✅ Kurczak zmienia rozmiar podczas spadania, zmiana jest płynna i zauważalna przez gracza  
   ⏱️ ~4h
 
@@ -95,5 +95,3 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 - [ ] ✍️ Zaktualizować dokumentację techniczną opisując nowe mechaniki  
   ✅ Dokumentacja dostępna i zatwierdzona na repozytorium  
   ⏱️ ~2h
-
----

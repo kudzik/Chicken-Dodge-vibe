@@ -22,6 +22,16 @@ describe('GameService', () => {
       expect(gameService.chickens[0].x).toBeGreaterThanOrEqual(50);
       expect(gameService.chickens[0].x).toBeLessThanOrEqual(750);
     });
+    
+    test('should spawn different types of chickens', () => {
+      const types = new Set();
+      for (let i = 0; i < 50; i++) {
+        gameService.spawnChicken();
+        const lastChicken = gameService.chickens[gameService.chickens.length - 1];
+        types.add(lastChicken.type);
+      }
+      expect(types.size).toBeGreaterThan(1); // Should have multiple types
+    });
   });
 
   describe('game state', () => {

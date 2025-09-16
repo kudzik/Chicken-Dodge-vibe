@@ -1,6 +1,8 @@
 import { Player } from '../domain/Player.js';
 import { Chicken } from '../domain/Chicken.js';
 import { FastChicken } from '../domain/FastChicken.js';
+import { ChaoticChicken } from '../domain/ChaoticChicken.js';
+import { MutantChicken } from '../domain/MutantChicken.js';
 
 export class GameService {
     constructor() {
@@ -12,10 +14,14 @@ export class GameService {
 
     spawnChicken() {
         const x = Math.random() * 700 + 50;
+        const rand = Math.random();
         
-        // 30% szans na szybkiego kurczaka
-        if (Math.random() < 0.3) {
+        if (rand < 0.2) {
             this.chickens.push(new FastChicken(x));
+        } else if (rand < 0.4) {
+            this.chickens.push(new ChaoticChicken(x));
+        } else if (rand < 0.6) {
+            this.chickens.push(new MutantChicken(x));
         } else {
             this.chickens.push(new Chicken(x));
         }
