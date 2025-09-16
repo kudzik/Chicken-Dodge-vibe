@@ -33,3 +33,8 @@
 [2024-12-19 16:10:00] [Zmieniono] plik src/application/GameService.js - Poprawiono logikę kolizji
 [2024-12-19 16:10:00] [Zmieniono] plik src/presentation/GameView.js - Dodano komunikat Game Over
 [2024-12-19 16:10:00] [Zmieniono] plik TODO.md - Oznaczono punkt detekcji kolizji jako wykonany
+[2024-12-19 16:15:00] [Zmieniono] plik src/presentation/GameView.js - Poprawiono HUD z tłem i wizualnymi sercami
+[2024-12-19 16:15:00] [Zmieniono] plik TODO.md - Oznaczono punkt HUD jako wykonany
+[2024-12-19 16:20:00] [Zmieniono] plik src/application/GameService.js - Dodano śledzenie zdobytych punktów dla feedbacku
+[2024-12-19 16:20:00] [Zmieniono] plik src/presentation/GameView.js - Dodano animowany feedback dla zdobytych punktów
+[2024-12-19 16:20:00] [Zmieniono] plik TODO.md - Oznaczono punkt naliczania punktów jako wykonany

@@ -6,6 +6,7 @@ export class GameService {
         this.player = new Player();
         this.chickens = [];
         this.gameRunning = true;
+        this.lastScoreGain = 0;
     }
 
     spawnChicken() {
@@ -15,6 +16,9 @@ export class GameService {
 
     updateGame() {
         if (!this.gameRunning) return;
+        
+        // Reset score gain feedback
+        this.lastScoreGain = 0;
 
         // Update chickens
         this.chickens.forEach(chicken => chicken.update());
@@ -35,6 +39,9 @@ export class GameService {
             if (chicken.isOffScreen()) {
                 if (chicken.active) {
                     this.player.addScore(10);
+                    this.lastScoreGain = 10;
+                } else {
+                    this.lastScoreGain = 0;
                 }
                 return false;
             }
@@ -46,7 +53,8 @@ export class GameService {
         return {
             player: this.player,
             chickens: this.chickens,
-            gameRunning: this.gameRunning
+            gameRunning: this.gameRunning,
+            lastScoreGain: this.lastScoreGain
         };
     }
 }

@@ -34,11 +34,11 @@
 
 ## Faza 3: Punkty i życie, UI podstawowe (HUD)
 
-- [ ] ✍️ Wyświetlanie aktualnej liczby punktów i życia na ekranie (HUD)  
+- [x] ✍️ Wyświetlanie aktualnej liczby punktów i życia na ekranie (HUD)  
   ✅ HUD aktualizuje się zgodnie z punktami i życiami  
   ⏱️ ~2h
 
-- [ ] ✍️ Naliczanie punktów za uniknięcie kurczaka (po opuszczeniu ekranu)  
+- [x] ✍️ Naliczanie punktów za uniknięcie kurczaka (po opuszczeniu ekranu)  
   ✅ Punkty rosną po każdorazowym uniknięciu kurczaka  
   ⏱️ ~3h
 

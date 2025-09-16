@@ -9,21 +9,39 @@ export class GameView {
         // Create player placeholder (green square)
         this.playerSprite = this.scene.add.rectangle(400, 550, 40, 40, 0x00ff00);
         
-        // Create UI text
-        this.scoreText = this.scene.add.text(16, 16, 'Score: 0', {
-            fontSize: '24px',
-            fill: '#000'
+        // Create HUD background
+        this.hudBg = this.scene.add.rectangle(120, 45, 220, 70, 0x000000, 0.3);
+        
+        // Create UI text with better styling
+        this.scoreText = this.scene.add.text(20, 20, 'Score: 0', {
+            fontSize: '28px',
+            fill: '#ffffff',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 2
         });
         
-        this.livesText = this.scene.add.text(16, 50, 'Lives: 3', {
+        this.livesText = this.scene.add.text(20, 55, 'Lives: ❤❤❤', {
             fontSize: '24px',
-            fill: '#000'
+            fill: '#ff4444',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 2
         });
         
         this.gameOverText = this.scene.add.text(400, 300, '', {
             fontSize: '32px',
             fill: '#ff0000',
             fontFamily: 'Arial'
+        }).setOrigin(0.5);
+        
+        // Score feedback text
+        this.scoreGainText = this.scene.add.text(400, 200, '', {
+            fontSize: '24px',
+            fill: '#00ff00',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 2
         }).setOrigin(0.5);
         
         // Static chicken removed - now using dynamic spawning
@@ -35,13 +53,32 @@ export class GameView {
             this.playerSprite.x = gameState.player.x;
         }
 
-        // Update UI
+        // Update UI with hearts for lives
         this.scoreText.setText(`Score: ${gameState.player.score}`);
-        this.livesText.setText(`Lives: ${gameState.player.lives}`);
+        const hearts = '❤'.repeat(Math.max(0, gameState.player.lives));
+        const emptyHearts = '♡'.repeat(Math.max(0, 3 - gameState.player.lives));
+        this.livesText.setText(`Lives: ${hearts}${emptyHearts}`);
         
         // Show game over message
         if (!gameState.gameRunning) {
             this.gameOverText.setText('GAME OVER\nPress F5 to restart');
+        }
+        
+        // Show score gain feedback
+        if (gameState.lastScoreGain > 0) {
+            this.scoreGainText.setText(`+${gameState.lastScoreGain}`);
+            // Fade out effect
+            this.scene.tweens.add({
+                targets: this.scoreGainText,
+                alpha: 0,
+                y: this.scoreGainText.y - 30,
+                duration: 1000,
+                onComplete: () => {
+                    this.scoreGainText.alpha = 1;
+                    this.scoreGainText.y = 200;
+                    this.scoreGainText.setText('');
+                }
+            });
         }
 
         // Update chickens
