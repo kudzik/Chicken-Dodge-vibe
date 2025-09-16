@@ -44,7 +44,7 @@
 
 ## Faza 4: Testy i dokumentacja
 
-- [ ] ✍️ Napisać pierwsze testy jednostkowe dla logiki punktów i życia  
+- [x] ✍️ Napisać pierwsze testy jednostkowe dla logiki punktów i życia  
   ✅ Testy wykonują się bez błędów i pokrywają podstawową logikę  
   ⏱️ ~3h
 

@@ -16,3 +16,10 @@
 [2024-12-19 15:45:00] [Zmieniono] plik src/infrastructure/InputHandler.js - Poprawiono sterowanie dotykowe dla płynności
 [2024-12-19 15:45:00] [Zmieniono] plik src/domain/Player.js - Zwiększono prędkość ruchu gracza
 [2024-12-19 15:45:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt Fazy 2 jako wykonany
+[2024-12-19 15:50:00] [Dodano] plik jest.config.js - Konfiguracja Jest dla testów ES modules
+[2024-12-19 15:50:00] [Dodano] plik tests/Player.test.js - Testy jednostkowe dla klasy Player
+[2024-12-19 15:50:00] [Dodano] plik tests/Chicken.test.js - Testy jednostkowe dla klasy Chicken
+[2024-12-19 15:50:00] [Dodano] plik tests/GameService.test.js - Testy jednostkowe dla GameService
+[2024-12-19 15:50:00] [Zmieniono] plik package.json - Dodano type module dla ES modules
+[2024-12-19 15:50:00] [Zmieniono] plik TODO.md - Oznaczono punkt testów jako wykonany
+[2024-12-19 15:55:00] [Dodano] plik .gitignore - Konfiguracja Git ignore dla projektu Node.js/Phaser
