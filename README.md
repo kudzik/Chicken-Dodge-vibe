@@ -1,5 +1,7 @@
 # Chicken Dodge
 
+[Chat](https://www.perplexity.ai/search/product-requirements-document-5QH0DyNjQQ.YZB50aTXbQQ)
+
 Casual arcade game gdzie gracz unika spadających kurczaków.
 
 ## Opis projektu
@@ -9,8 +11,10 @@ Casual arcade game gdzie gracz unika spadających kurczaków.
 ### Kluczowe funkcje
 
 - Sterowanie klawiaturą (←→) i dotykiem
-- 3 typy kurczaków z różnymi zachowaniami
-- System punktów, życia i mnożników
+- 4 typy kurczaków z różnymi zachowaniami
+- System punktów, życia i mnożników (do x5)
+- 10 typów power-upów (5 pozytywnych + 5 negatywnych)
+- Efekty wizualne i dźwiękowe
 - Responsywny UI (desktop + mobile)
 - Globalny leaderboard
 
@@ -65,13 +69,16 @@ npm run test:coverage
 
 ## Status rozwoju
 
-✅ **Sprint 1 ukończony** - Podstawowy rdzeń rozgrywki
+✅ **Sprint 1 ukończony** - Podstawowy rdzeń rozgrywki  
+✅ **Sprint 2 ukończony** - Różne typy kurczaków i mnożnik punktów  
+🚧 **Sprint 3 w toku** - System power-upów (3/4 fazy ukończone)
 
 Zobacz [TODO.md](./TODO.md) dla szczegółów postępu.
 
 ## Dokumentacja
 
 - [Architektura](./docs/ARCHITECTURE.md) - Opis architektury systemu
+- [Mechaniki gry](./docs/MECHANICS.md) - Szczegółowy opis mechanik
 - [Instrukcja uruchomienia](./docs/SETUP.md) - Jak uruchomić projekt
 - [API](./docs/API.md) - Dokumentacja klas i metod
 

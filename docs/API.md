@@ -7,7 +7,7 @@
 ```javascript
 class Player {
   constructor(x = 400, y = 550)
-  move(direction)      // -1 lewo, 1 prawo
+  move(direction, speedBoost, slowDown) // Ruch z efektami power-upów
   takeDamage()         // Zwraca true jeśli żyje
   addScore(points)     // Dodaje punkty
 }
@@ -54,6 +54,33 @@ class MutantChicken extends Chicken {
 }
 ```
 
+### PowerUp
+
+```javascript
+class PowerUp {
+  constructor(x, y, type)
+  update()             // Ruch w dół
+  isOffScreen()        // Sprawdza czy poza ekranem
+  checkCollision(player) // Sprawdza kolizję
+}
+
+// Typy power-upów:
+POWER_UP_TYPES = {
+  // Pozytywne (biała ramka)
+  EXTRA_LIFE: 'extra_life',
+  INVINCIBILITY: 'invincibility',
+  DOUBLE_POINTS: 'double_points', 
+  SPEED_BOOST: 'speed_boost',
+  INVISIBILITY: 'invisibility',
+  // Negatywne (czarna ramka)
+  SLOW_DOWN: 'slow_down',
+  REVERSE_CONTROLS: 'reverse_controls',
+  LOSE_POINTS: 'lose_points',
+  LOSE_LIFE: 'lose_life',
+  MORE_CHICKENS: 'more_chickens'
+}
+```
+
 ## Application Services
 
 ### GameService
@@ -61,13 +88,17 @@ class MutantChicken extends Chicken {
 ```javascript
 class GameService {
   spawnChicken()       // Tworzy nowego kurczaka (losowy typ)
-  updateGame()         // Główna pętla gry z mnożnikiem
-  getGameState()       // Zwraca stan gry + mnożnik
+  spawnPowerUp()       // Tworzy nowy power-up (70% pozytywny, 30% negatywny)
+  updateGame()         // Główna pętla gry z mnożnikiem i power-upami
+  getGameState()       // Zwraca stan gry + mnożnik + power-upy
+  activatePowerUp(type) // Aktywuje efekt power-upu
   
   // Właściwości:
   streakCount          // Licznik serii uników
   multiplier           // Mnożnik punktów (1-5)
   lastScoreGain        // Ostatnio zdobyte punkty
+  powerUps             // Lista aktywnych power-upów
+  activePowerUps       // Mapa aktywnych efektów
 }
 ```
 

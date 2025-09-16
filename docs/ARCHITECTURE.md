@@ -15,19 +15,20 @@ Chicken Dodge wykorzystuje **Clean Architecture** z wzorcem **MVVM** na warstwie
 - `FastChicken.js` - Kurczak z przyspieszeniem
 - `ChaoticChicken.js` - Kurczak z chaotycznym ruchem
 - `MutantChicken.js` - Kurczak zmieniający rozmiar
+- `PowerUp.js` - System power-upów (10 typów efektów)
 
 ### Application Layer (`src/application/`)
 
 **Use cases i serwisy aplikacji**
 
-- `GameService.js` - Główna logika gry (spawning, kolizje, punkty, mnożnik)
+- `GameService.js` - Główna logika gry (spawning, kolizje, punkty, mnożnik, power-upy)
 
 ### Presentation Layer (`src/presentation/`)
 
 **MVVM - Model-View-ViewModel**
 
-- `GameView.js` - Widok (renderowanie Phaser 3, HUD z mnożnikiem)
-- `GameViewModel.js` - ViewModel (łączy logikę z widokiem)
+- `GameView.js` - Widok (renderowanie Phaser 3, HUD, power-upy, efekty)
+- `GameViewModel.js` - ViewModel (łączy logikę z widokiem, obsługa power-upów)
 
 ### Infrastructure Layer (`src/infrastructure/`)
 

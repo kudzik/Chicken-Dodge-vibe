@@ -88,6 +88,27 @@
 - **Dotyk**: Lewa/prawa strona ekranu
 - **Responsywność**: Dostosowane do różnych rozmiarów
 
+## Power-upy
+
+### Pozytywne Power-upy (70% szans)
+- **Wizualizacja**: Okrągłe z białą ramką
+- **Spawning**: 10% szans przy każdym kurczaku
+
+#### Extra Life (Czerwony) - Dodatkowe życie
+#### Invincibility (Żółty) - Nieśmiertelność (5s)
+#### Double Points (Zielony) - Podwójne punkty (5s)
+#### Speed Boost (Niebieski) - Przyspieszenie (5s)
+#### Invisibility (Magenta) - Niewidzialność (5s)
+
+### Negatywne Power-upy (30% szans)
+- **Wizualizacja**: Okrągłe z czarną ramką
+
+#### Slow Down (Ciemny fiolet) - Spowolnienie (5s)
+#### Reverse Controls (Brązowy) - Odwrotne sterowanie (5s)
+#### Lose Points (Ciemny szary) - Utrata 50 punktów
+#### Lose Life (Ciemny czerwony) - Utrata życia
+#### More Chickens (Ciemny szary) - +3 kurczaki
+
 ## Spawning Kurczaków
 
 ### Częstotliwość
