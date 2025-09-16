@@ -104,7 +104,7 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 
 ### Faza 3: Power-upy i ich efekty
 
-- [ ] ✍️ Dodać logikę aktywacji i dezaktywacji power-upów wraz z efektami wizualnymi  
+- [x] ✍️ Dodać logikę aktywacji i dezaktywacji power-upów wraz z efektami wizualnymi  
   ✅ Po aktywacji power-up wpływa na rozgrywkę przez zaplanowany czas, efekt jest widoczny  
   ⏱️ ~3h
 
