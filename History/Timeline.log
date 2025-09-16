@@ -67,3 +67,6 @@
 [2024-12-19 16:50:00] [Dodano] plik tests/MutantChicken.test.js - Testy jednostkowe dla MutantChicken
 [2024-12-19 16:50:00] [Zmieniono] plik tests/GameService.test.js - Rozszerzono o testy różnych typów kurczaków
 [2024-12-19 16:50:00] [Zmieniono] plik tests/MutantChicken.test.js - Poprawiono test kolizji
+[2024-12-19 16:55:00] [Zmieniono] plik src/application/GameService.js - Dodano system mnożnika punktów oparty na serii uników
+[2024-12-19 16:55:00] [Zmieniono] plik src/presentation/GameView.js - Dodano wyświetlanie mnożnika w HUD
+[2024-12-19 16:55:00] [Zmieniono] plik TODO.md - Oznaczono punkt mnożnika jako wykonany

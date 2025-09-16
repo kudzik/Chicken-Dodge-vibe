@@ -10,7 +10,7 @@ export class GameView {
         this.playerSprite = this.scene.add.rectangle(400, 550, 40, 40, 0x00ff00);
         
         // Create HUD background
-        this.hudBg = this.scene.add.rectangle(120, 45, 220, 70, 0x000000, 0.3);
+        this.hudBg = this.scene.add.rectangle(120, 55, 220, 90, 0x000000, 0.3);
         
         // Create UI text with better styling
         this.scoreText = this.scene.add.text(20, 20, 'Score: 0', {
@@ -24,6 +24,14 @@ export class GameView {
         this.livesText = this.scene.add.text(20, 55, 'Lives: ❤❤❤', {
             fontSize: '24px',
             fill: '#ff4444',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 2
+        });
+        
+        this.multiplierText = this.scene.add.text(20, 85, 'Multiplier: x1', {
+            fontSize: '20px',
+            fill: '#ffff00',
             fontFamily: 'Arial',
             stroke: '#000000',
             strokeThickness: 2
@@ -58,6 +66,14 @@ export class GameView {
         const hearts = '❤'.repeat(Math.max(0, gameState.player.lives));
         const emptyHearts = '♡'.repeat(Math.max(0, 3 - gameState.player.lives));
         this.livesText.setText(`Lives: ${hearts}${emptyHearts}`);
+        this.multiplierText.setText(`Multiplier: x${gameState.multiplier} (${gameState.streakCount})`);
+        
+        // Change multiplier color based on value
+        if (gameState.multiplier > 1) {
+            this.multiplierText.setFill('#00ff00'); // Green for active multiplier
+        } else {
+            this.multiplierText.setFill('#ffff00'); // Yellow for base multiplier
+        }
         
         // Show game over message
         if (!gameState.gameRunning) {

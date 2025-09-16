@@ -72,26 +72,64 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 
 ## Faza 2: Mnożnik punktów i mechanika życia
 
-- [ ] ✍️ Dodać licznik serii uników dla mnożnika punktów  
+- [x] ✍️ Dodać licznik serii uników dla mnożnika punktów  
   ✅ Mnożnik rośnie z każdym kolejnym unikniętym kurczakiem, jest resetowany przy trafieniu  
   ⏱️ ~3h
 
-- [ ] ✍️ Ulepszyć logikę utraty życia i game over  
-  ✅ Postać ma 3 życia na start, utrata życia przy trafieniu, wyświetlenie komunikatu game over przy zerze życia  
+## Sprint 3: Power-upy, system skórek i podstawowa monetizacja
+
+### Faza 1: Power-upy i ich efekty
+
+- [ ] ✍️ Zaimplementować pozytywne power-up  
+  - dodatkowe życie  
+  - chwilowa niesmiertelność
+  - podwójne punkty
+  - szybsze ruchy postaci
+- niewidzialność
+- [ ] ✍️ Zaimplementować negatywne power-up
+  - spowolnienie ruchów postaci
+  - odwrotne sterowanie
+  - utrata punktów
+  - utrata życia
+  - zwiększona liczba spadających kurczaków
+  ✅ Power-upy są różnorodne i mają unikalne ikony  
+  ✅ Power-up pojawia się losowo, aktywuje efekt i znika po 5 sekundach lub podczas kolizji
+  ⏱️ ~4h
+
+- [ ] ✍️ Dodać logikę aktywacji i dezaktywacji power-upów wraz z efektami wizualnymi  
+  ✅ Po aktywacji power-up wpływa na rozgrywkę przez zaplanowany czas, efekt jest widoczny  
   ⏱️ ~3h
 
-## Faza 3: Aktualizacja HUD i UI
+### Faza 2: System skórek postaci i kurczaków
 
-- [ ] ✍️ Rozszerzyć HUD o wyświetlanie mnożnika punktów i aktualnych żyć  
-  ✅ HUD pokazuje aktualne punkty, życia i mnożnik w czasie rzeczywistym  
-  ⏱️ ~2h
+- [ ] ✍️ Utworzyć mechanizm odblokowywania i wyboru skórki (minimum 3 skórki)  
+  ✅ Użytkownik może wybrać skórkę w menu, zmiana widoczna w grze  
+  ⏱️ ~4h
 
-## Faza 4: Testy i dokumentacja
-
-- [ ] ✍️ Napisać testy jednostkowe dla nowej logiki kurczaków, mnożnika i życia  
-  ✅ Testy pokrywają zachowania wszystkich typów kurczaków oraz mechaniki mnożnika i życia  
+- [ ] ✍️ Zaimplementować wyświetlanie aktualnej skórki na postaci i kurczakach w grze  
+  ✅ Skórki prawidłowo wyświetlane i zmieniane dynamicznie  
   ⏱️ ~3h
 
-- [ ] ✍️ Zaktualizować dokumentację techniczną opisując nowe mechaniki  
-  ✅ Dokumentacja dostępna i zatwierdzona na repozytorium  
+### Faza 3: Podstawowa monetizacja – reklamy rewardowane
+
+- [ ] ✍️ Zintegrować system nagród reklamowych rewarded video (np. usługa AdMob lub inny provider)  
+  ✅ Reklama wyświetla się poprawnie i nagradza użytkownika (np. dodatkowym życiem)  
+  ⏱️ ~4h
+
+- [ ] ✍️ Dodanie UI do aktywacji reklamy i obserwacji statusu nagrody  
+  ✅ UI przyjazne, komunikuje możliwość obejrzenia reklamy oraz efekt po jej zakończeniu  
   ⏱️ ~2h
+
+### Faza 4: Testy i dokumentacja
+
+- [ ] ✍️ Napisać testy jednostkowe pokrywające logikę power-upów i wyboru skórek  
+  ✅ Testy wykonują się poprawnie i pokrywają scenariusze aktywacji i zmiany skórek  
+  ⏱️ ~3h
+
+- [ ] ✍️ Uaktualnić dokumentację techniczną o opis nowych funkcji i integracji reklam  
+  ✅ Dokumentacja dostępna i zweryfikowana przez zespół  
+  ⏱️ ~2h
+
+---
+
+**Szacowany czas sprintu:** ~25h

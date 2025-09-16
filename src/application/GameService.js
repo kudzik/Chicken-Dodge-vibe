@@ -10,6 +10,8 @@ export class GameService {
         this.chickens = [];
         this.gameRunning = true;
         this.lastScoreGain = 0;
+        this.streakCount = 0;
+        this.multiplier = 1;
     }
 
     spawnChicken() {
@@ -41,6 +43,9 @@ export class GameService {
             if (chicken.active && chicken.checkCollision(this.player)) {
                 chicken.active = false;
                 const stillAlive = this.player.takeDamage();
+                // Reset streak and multiplier on hit
+                this.streakCount = 0;
+                this.multiplier = 1;
                 if (!stillAlive) {
                     this.gameRunning = false;
                 }
@@ -51,8 +56,14 @@ export class GameService {
         this.chickens = this.chickens.filter(chicken => {
             if (chicken.isOffScreen()) {
                 if (chicken.active) {
-                    this.player.addScore(10);
-                    this.lastScoreGain = 10;
+                    // Increase streak and multiplier
+                    this.streakCount++;
+                    this.multiplier = Math.min(Math.floor(this.streakCount / 3) + 1, 5); // Max 5x multiplier
+                    
+                    const baseScore = 10;
+                    const finalScore = baseScore * this.multiplier;
+                    this.player.addScore(finalScore);
+                    this.lastScoreGain = finalScore;
                 } else {
                     this.lastScoreGain = 0;
                 }
@@ -67,7 +78,9 @@ export class GameService {
             player: this.player,
             chickens: this.chickens,
             gameRunning: this.gameRunning,
-            lastScoreGain: this.lastScoreGain
+            lastScoreGain: this.lastScoreGain,
+            streakCount: this.streakCount,
+            multiplier: this.multiplier
         };
     }
 }
