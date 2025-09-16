@@ -39,8 +39,14 @@ export class GameService {
     
     spawnPowerUp() {
         const x = Math.random() * 700 + 50;
-        const types = Object.values(POWER_UP_TYPES);
+        const positiveTypes = [POWER_UP_TYPES.EXTRA_LIFE, POWER_UP_TYPES.INVINCIBILITY, POWER_UP_TYPES.DOUBLE_POINTS, POWER_UP_TYPES.SPEED_BOOST, POWER_UP_TYPES.INVISIBILITY];
+        const negativeTypes = [POWER_UP_TYPES.SLOW_DOWN, POWER_UP_TYPES.REVERSE_CONTROLS, POWER_UP_TYPES.LOSE_POINTS, POWER_UP_TYPES.LOSE_LIFE, POWER_UP_TYPES.MORE_CHICKENS];
+        
+        // 70% positive, 30% negative
+        const isPositive = Math.random() < 0.7;
+        const types = isPositive ? positiveTypes : negativeTypes;
         const type = types[Math.floor(Math.random() * types.length)];
+        
         this.powerUps.push(new PowerUp(x, -30, type));
     }
 
@@ -136,6 +142,7 @@ export class GameService {
         const duration = 5000; // 5 seconds
         
         switch (type) {
+            // Positive power-ups
             case POWER_UP_TYPES.EXTRA_LIFE:
                 this.player.lives = Math.min(this.player.lives + 1, 3);
                 break;
@@ -143,6 +150,27 @@ export class GameService {
             case POWER_UP_TYPES.DOUBLE_POINTS:
             case POWER_UP_TYPES.SPEED_BOOST:
             case POWER_UP_TYPES.INVISIBILITY:
+                this.activePowerUps.set(type, Date.now() + duration);
+                break;
+            
+            // Negative power-ups
+            case POWER_UP_TYPES.LOSE_LIFE:
+                this.player.takeDamage();
+                if (this.player.lives <= 0) {
+                    this.gameRunning = false;
+                }
+                break;
+            case POWER_UP_TYPES.LOSE_POINTS:
+                this.player.score = Math.max(0, this.player.score - 50);
+                break;
+            case POWER_UP_TYPES.MORE_CHICKENS:
+                // Spawn 3 extra chickens immediately
+                for (let i = 0; i < 3; i++) {
+                    this.spawnChicken();
+                }
+                break;
+            case POWER_UP_TYPES.SLOW_DOWN:
+            case POWER_UP_TYPES.REVERSE_CONTROLS:
                 this.activePowerUps.set(type, Date.now() + duration);
                 break;
         }
@@ -154,5 +182,13 @@ export class GameService {
     
     isPlayerInvisible() {
         return this.activePowerUps.has(POWER_UP_TYPES.INVISIBILITY);
+    }
+    
+    isPlayerSlow() {
+        return this.activePowerUps.has(POWER_UP_TYPES.SLOW_DOWN);
+    }
+    
+    hasReverseControls() {
+        return this.activePowerUps.has(POWER_UP_TYPES.REVERSE_CONTROLS);
     }
 }

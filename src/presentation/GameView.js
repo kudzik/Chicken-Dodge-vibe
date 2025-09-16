@@ -22,7 +22,7 @@ export class GameView {
         });
         
         // Power-up legend background
-        this.legendBg = this.scene.add.rectangle(680, 85, 240, 150, 0x000000, 0.8);
+        this.legendBg = this.scene.add.rectangle(680, 120, 240, 220, 0x000000, 0.8);
         
         // Power-up legend title
         this.legendTitle = this.scene.add.text(680, 25, 'POWER-UPS:', {
@@ -33,19 +33,57 @@ export class GameView {
             strokeThickness: 2
         }).setOrigin(0.5, 0);
         
-        // Create colored circles for legend
+        // Positive power-ups subtitle
+        this.positiveTitle = this.scene.add.text(575, 45, 'POZYTYWNE (biała ramka):', {
+            fontSize: '10px',
+            fill: '#00ff00',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 1
+        });
+        
+        // Create colored circles for positive power-ups
         this.legendCircles = [
-            { circle: this.scene.add.circle(575, 50, 8, 0xff0000).setStrokeStyle(1, 0xffffff), text: 'Dodatkowe życie' },
-            { circle: this.scene.add.circle(575, 70, 8, 0xffff00).setStrokeStyle(1, 0xffffff), text: 'Nieśmiertelność' },
-            { circle: this.scene.add.circle(575, 90, 8, 0x00ff00).setStrokeStyle(1, 0xffffff), text: 'Podwójne punkty' },
-            { circle: this.scene.add.circle(575, 110, 8, 0x0000ff).setStrokeStyle(1, 0xffffff), text: 'Przyspieszenie' },
-            { circle: this.scene.add.circle(575, 130, 8, 0xff00ff).setStrokeStyle(1, 0xffffff), text: 'Niewidzialność' }
+            { circle: this.scene.add.circle(575, 65, 6, 0xff0000).setStrokeStyle(1, 0xffffff), text: 'Dodatkowe życie' },
+            { circle: this.scene.add.circle(575, 80, 6, 0xffff00).setStrokeStyle(1, 0xffffff), text: 'Nieśmiertelność' },
+            { circle: this.scene.add.circle(575, 95, 6, 0x00ff00).setStrokeStyle(1, 0xffffff), text: 'Podwójne punkty' },
+            { circle: this.scene.add.circle(575, 110, 6, 0x0000ff).setStrokeStyle(1, 0xffffff), text: 'Przyspieszenie' },
+            { circle: this.scene.add.circle(575, 125, 6, 0xff00ff).setStrokeStyle(1, 0xffffff), text: 'Niewidzialność' }
         ];
         
-        // Add text labels
+        // Negative power-ups subtitle
+        this.negativeTitle = this.scene.add.text(575, 145, 'NEGATYWNE (czarna ramka):', {
+            fontSize: '10px',
+            fill: '#ff0000',
+            fontFamily: 'Arial',
+            stroke: '#000000',
+            strokeThickness: 1
+        });
+        
+        // Add negative power-ups circles
+        this.negativeCircles = [
+            { circle: this.scene.add.circle(575, 165, 6, 0x800080).setStrokeStyle(1, 0x000000), text: 'Spowolnienie' },
+            { circle: this.scene.add.circle(575, 180, 6, 0x8b4513).setStrokeStyle(1, 0x000000), text: 'Odwrotne sterowanie' },
+            { circle: this.scene.add.circle(575, 195, 6, 0x696969).setStrokeStyle(1, 0x000000), text: 'Utrata punktów' },
+            { circle: this.scene.add.circle(575, 210, 6, 0x8b0000).setStrokeStyle(1, 0x000000), text: 'Utrata życia' },
+            { circle: this.scene.add.circle(575, 225, 6, 0x2f4f4f).setStrokeStyle(1, 0x000000), text: 'Więcej kurczaków' }
+        ];
+        
+        // Add text labels for positive
         this.legendTexts = this.legendCircles.map((item, index) => {
-            return this.scene.add.text(595, 50 + index * 20, item.text, {
-                fontSize: '12px',
+            return this.scene.add.text(590, 65 + index * 15, item.text, {
+                fontSize: '10px',
+                fill: '#ffffff',
+                fontFamily: 'Arial',
+                stroke: '#000000',
+                strokeThickness: 1
+            }).setOrigin(0, 0.5);
+        });
+        
+        // Add text labels for negative
+        this.negativeTexts = this.negativeCircles.map((item, index) => {
+            return this.scene.add.text(590, 165 + index * 15, item.text, {
+                fontSize: '10px',
                 fill: '#ffffff',
                 fontFamily: 'Arial',
                 stroke: '#000000',
@@ -138,13 +176,23 @@ export class GameView {
         }
         
         // Update player appearance based on power-ups
-        if (this.playerSprite && gameState.activePowerUps && gameState.activePowerUps.includes('invincibility')) {
-            this.playerSprite.setFillStyle(0xffff00); // Yellow tint
-        } else if (this.playerSprite && gameState.activePowerUps && gameState.activePowerUps.includes('invisibility')) {
-            this.playerSprite.setAlpha(0.5); // Semi-transparent
-        } else if (this.playerSprite) {
-            this.playerSprite.setFillStyle(0x00ff00); // Green (original color)
-            this.playerSprite.setAlpha(1);
+        if (this.playerSprite && gameState.activePowerUps) {
+            if (gameState.activePowerUps.includes('invincibility')) {
+                this.playerSprite.setFillStyle(0xffff00); // Yellow tint
+                this.playerSprite.setAlpha(1);
+            } else if (gameState.activePowerUps.includes('invisibility')) {
+                this.playerSprite.setFillStyle(0x00ff00); // Green
+                this.playerSprite.setAlpha(0.5); // Semi-transparent
+            } else if (gameState.activePowerUps.includes('slow_down')) {
+                this.playerSprite.setFillStyle(0x800080); // Purple tint for slow
+                this.playerSprite.setAlpha(1);
+            } else if (gameState.activePowerUps.includes('reverse_controls')) {
+                this.playerSprite.setFillStyle(0x8b4513); // Brown tint for reverse
+                this.playerSprite.setAlpha(1);
+            } else {
+                this.playerSprite.setFillStyle(0x00ff00); // Green (original color)
+                this.playerSprite.setAlpha(1);
+            }
         }
     }
 
@@ -202,20 +250,26 @@ export class GameView {
             sprite.destroy();
         }
         
-        // Add missing sprites (circles with white border)
+        // Add missing sprites (circles with border)
         while (this.powerUpSprites.length < powerUps.length) {
             const circle = this.scene.add.circle(0, 0, 12, 0x00ffff);
-            circle.setStrokeStyle(2, 0xffffff); // White border
             this.powerUpSprites.push(circle);
         }
         
         // Different colors for different types
         const colors = {
+            // Positive power-ups (bright colors)
             'extra_life': 0xff0000,     // Red - Dodatkowe życie
             'invincibility': 0xffff00,  // Yellow - Nieśmiertelność
             'double_points': 0x00ff00,  // Green - Podwójne punkty
             'speed_boost': 0x0000ff,    // Blue - Przyspieszenie
-            'invisibility': 0xff00ff    // Magenta - Niewidzialność
+            'invisibility': 0xff00ff,   // Magenta - Niewidzialność
+            // Negative power-ups (dark colors)
+            'slow_down': 0x800080,      // Dark Purple - Spowolnienie
+            'reverse_controls': 0x8b4513, // Brown - Odwrotne sterowanie
+            'lose_points': 0x696969,    // Dark Gray - Utrata punktów
+            'lose_life': 0x8b0000,      // Dark Red - Utrata życia
+            'more_chickens': 0x2f4f4f   // Dark Slate Gray - Więcej kurczaków
         };
         
         // Update positions and colors
@@ -225,6 +279,11 @@ export class GameView {
                 this.powerUpSprites[index].y = powerUp.y;
                 this.powerUpSprites[index].setVisible(powerUp.active);
                 this.powerUpSprites[index].setFillStyle(colors[powerUp.type] || 0x00ffff);
+                
+                // Set border color based on power-up type
+                const isNegative = ['slow_down', 'reverse_controls', 'lose_points', 'lose_life', 'more_chickens'].includes(powerUp.type);
+                const borderColor = isNegative ? 0x000000 : 0xffffff; // Black for negative, white for positive
+                this.powerUpSprites[index].setStrokeStyle(2, borderColor);
             }
         });
     }

@@ -32,5 +32,11 @@ export const POWER_UP_TYPES = {
     INVINCIBILITY: 'invincibility', 
     DOUBLE_POINTS: 'double_points',
     SPEED_BOOST: 'speed_boost',
-    INVISIBILITY: 'invisibility'
+    INVISIBILITY: 'invisibility',
+    // Negative power-ups
+    SLOW_DOWN: 'slow_down',
+    REVERSE_CONTROLS: 'reverse_controls',
+    LOSE_POINTS: 'lose_points',
+    LOSE_LIFE: 'lose_life',
+    MORE_CHICKENS: 'more_chickens'
 };

@@ -9,8 +9,17 @@ export class GameViewModel {
     }
 
     handleInput(direction) {
+        let finalDirection = direction;
+        
+        // Reverse controls effect
+        if (this.gameService.hasReverseControls()) {
+            finalDirection = -direction;
+        }
+        
         const speedBoost = this.gameService.isPlayerFast();
-        this.gameService.player.move(direction, speedBoost);
+        const slowDown = this.gameService.isPlayerSlow();
+        
+        this.gameService.player.move(finalDirection, speedBoost, slowDown);
     }
 
     update() {

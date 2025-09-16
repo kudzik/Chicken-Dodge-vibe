@@ -92,7 +92,7 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 
 ### Faza 2: Power-upy i ich efekty
 
-- [ ] ✍️ Zaimplementować negatywne power-up
+- [x] ✍️ Zaimplementować negatywne power-up
   - spowolnienie ruchów postaci
   - odwrotne sterowanie
   - utrata punktów
