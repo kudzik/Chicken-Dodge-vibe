@@ -21,14 +21,36 @@ export class GameView {
             strokeThickness: 2
         });
         
-        // Power-up legend
-        this.powerUpLegend = this.scene.add.text(600, 20, 
-            'Power-ups:\n🔴 Dodatkowe życie\n🟡 Nieśmiertelność\n🟢 Podwójne punkty\n🔵 Przyspieszenie\n🟣 Niewidzialność', {
+        // Power-up legend background
+        this.legendBg = this.scene.add.rectangle(680, 85, 240, 150, 0x000000, 0.8);
+        
+        // Power-up legend title
+        this.legendTitle = this.scene.add.text(680, 25, 'POWER-UPS:', {
             fontSize: '14px',
             fill: '#ffffff',
             fontFamily: 'Arial',
             stroke: '#000000',
-            strokeThickness: 1
+            strokeThickness: 2
+        }).setOrigin(0.5, 0);
+        
+        // Create colored circles for legend
+        this.legendCircles = [
+            { circle: this.scene.add.circle(575, 50, 8, 0xff0000).setStrokeStyle(1, 0xffffff), text: 'Dodatkowe życie' },
+            { circle: this.scene.add.circle(575, 70, 8, 0xffff00).setStrokeStyle(1, 0xffffff), text: 'Nieśmiertelność' },
+            { circle: this.scene.add.circle(575, 90, 8, 0x00ff00).setStrokeStyle(1, 0xffffff), text: 'Podwójne punkty' },
+            { circle: this.scene.add.circle(575, 110, 8, 0x0000ff).setStrokeStyle(1, 0xffffff), text: 'Przyspieszenie' },
+            { circle: this.scene.add.circle(575, 130, 8, 0xff00ff).setStrokeStyle(1, 0xffffff), text: 'Niewidzialność' }
+        ];
+        
+        // Add text labels
+        this.legendTexts = this.legendCircles.map((item, index) => {
+            return this.scene.add.text(595, 50 + index * 20, item.text, {
+                fontSize: '12px',
+                fill: '#ffffff',
+                fontFamily: 'Arial',
+                stroke: '#000000',
+                strokeThickness: 1
+            }).setOrigin(0, 0.5);
         });
         
         this.livesText = this.scene.add.text(20, 55, 'Lives: ❤❤❤', {
