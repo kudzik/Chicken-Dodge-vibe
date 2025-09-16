@@ -128,16 +128,44 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
   ✅ UI przyjazne, komunikuje możliwość obejrzenia reklamy oraz efekt po jej zakończeniu  
   ⏱️ ~2h
 
-### Faza 4: Testy i dokumentacja
+## Sprint 4: Projektowanie i implementacja UI/UX gry
 
-- [ ] ✍️ Napisać testy jednostkowe pokrywające logikę power-upów i wyboru skórek  
-  ✅ Testy wykonują się poprawnie i pokrywają scenariusze aktywacji i zmiany skórek  
+### Faza 1: Projekt graficzny i stylizacja
+
+- [ ] ✍️ Przygotować koncept artystyczny interfejsu gry — HUD, menu, przyciski  
+  ✅ Gotowe szkice i moodboard z kolorystyką i stylem ryzy układu elementów  
+  ⏱️ ~4h
+
+- [ ] ✍️ Zdefiniować paletę kolorów, czcionki i elementy stylów zgodne ze stylem kreskówkowym  
+  ✅ Dokument stylu (style guide) dostępny dla zespołu developerskiego  
   ⏱️ ~3h
 
-- [ ] ✍️ Uaktualnić dokumentację techniczną o opis nowych funkcji i integracji reklam  
-  ✅ Dokumentacja dostępna i zweryfikowana przez zespół  
+### Faza 2: Implementacja UI gry
+
+- [ ] ✍️ Zaimplementować podstawowe elementy HUD (punkty, życie, mnożnik) z nową grafiką  
+  ✅ HUD jest wyświetlany na ekranie zgodnie z projektem, animacje i efekty aktywne  
+  ⏱️ ~4h
+
+- [ ] ✍️ Zaprojektować i wdrożyć ekran główny / menu startowe z wyborem opcji  
+  ✅ Menu startowe działa poprawnie, zawiera przyciski START, OPTIONS i EXIT  
+  ⏱️ ~3h
+
+- [ ] ✍️ Zapewnienie responsywności UI dla desktop i urządzeń mobilnych  
+  ✅ UI dobrze wygląda i działa na różnych rozdzielczościach bez elementów poza widokiem  
+  ⏱️ ~3h
+
+### Faza 3: Testy wizualne i UX
+
+- [ ] ✍️ Przeprowadzić przegląd UI przez zespół i zebrać feedback  
+  ✅ Zespół potwierdza zgodność z założeniami stylistycznymi i funkcjonalnymi  
   ⏱️ ~2h
+
+- [ ] ✍️ Wdrożyć poprawki i usprawnienia UX na podstawie otrzymanego feedbacku  
+  ✅ Poprawki wdrożone, brak krytycznych uwag po drugiej rundzie testów  
+  ⏱️ ~3h
 
 ---
 
-**Szacowany czas sprintu:** ~25h
+**Szacowany czas sprintu:** ~22h
+
+
