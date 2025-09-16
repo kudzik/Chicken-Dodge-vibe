@@ -1,8 +1,8 @@
 export class Chicken {
-    constructor(x, y = 0) {
+    constructor(x, y = -30) {
         this.x = x;
         this.y = y;
-        this.speed = 2;
+        this.speed = 3;
         this.active = true;
     }
 
@@ -21,6 +21,6 @@ export class Chicken {
             Math.pow(this.x - player.x, 2) + 
             Math.pow(this.y - player.y, 2)
         );
-        return distance < 30;
+        return distance < 35;
     }
 }

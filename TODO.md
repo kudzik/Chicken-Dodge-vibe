@@ -20,15 +20,15 @@
   ✅ Sterowanie przesuwa postać płynnie w lewo i prawo zarówno na desktop, jak i mobile  
   ⏱️ ~3h
 
-- [ ] ✍️ Wyświetlić prostą postać kurczaka (placeholder) na scenie  
+- [x] ✍️ Wyświetlić prostą postać kurczaka (placeholder) na scenie  
   ✅ Kurczak widoczny na ekranie, statyczny  
   ⏱️ ~2h
 
-- [ ] ✍️ Zaimplementować mechanizm spadania kurczaka z góry ekranu  
+- [x] ✍️ Zaimplementować mechanizm spadania kurczaka z góry ekranu  
   ✅ Kurczak spada z losowej pozycji z góry ekranu, powtarzalny ruch  
   ⏱️ ~4h
 
-- [ ] ✍️ Podstawowa detekcja kolizji postaci i kurczaka (śmierć na 1 trafienie)  
+- [x] ✍️ Podstawowa detekcja kolizji postaci i kurczaka (śmierć na 1 trafienie)  
   ✅ Trafienie kurczakiem powoduje utratę życia i zatrzymanie ruchu kurczaka  
   ⏱️ ~3h
 

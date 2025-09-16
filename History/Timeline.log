@@ -23,3 +23,13 @@
 [2024-12-19 15:50:00] [Zmieniono] plik package.json - Dodano type module dla ES modules
 [2024-12-19 15:50:00] [Zmieniono] plik TODO.md - Oznaczono punkt testów jako wykonany
 [2024-12-19 15:55:00] [Dodano] plik .gitignore - Konfiguracja Git ignore dla projektu Node.js/Phaser
+[2024-12-19 16:00:00] [Zmieniono] plik src/presentation/GameView.js - Dodano statycznego kurczaka placeholder i poprawiono kolory
+[2024-12-19 16:00:00] [Zmieniono] plik TODO.md - Oznaczono punkt wyświetlania kurczaka jako wykonany
+[2024-12-19 16:05:00] [Zmieniono] plik src/presentation/GameView.js - Usunięto statycznego kurczaka placeholder
+[2024-12-19 16:05:00] [Zmieniono] plik src/main.js - Przyspieszono spawning kurczaków i dodano pierwszego od razu
+[2024-12-19 16:05:00] [Zmieniono] plik src/domain/Chicken.js - Zwiększono prędkość spadania kurczaków
+[2024-12-19 16:05:00] [Zmieniono] plik TODO.md - Oznaczono punkt spadania kurczaków jako wykonany
+[2024-12-19 16:10:00] [Zmieniono] plik src/domain/Chicken.js - Poprawiono detekcję kolizji (zwiększono obszar)
+[2024-12-19 16:10:00] [Zmieniono] plik src/application/GameService.js - Poprawiono logikę kolizji
+[2024-12-19 16:10:00] [Zmieniono] plik src/presentation/GameView.js - Dodano komunikat Game Over
+[2024-12-19 16:10:00] [Zmieniono] plik TODO.md - Oznaczono punkt detekcji kolizji jako wykonany

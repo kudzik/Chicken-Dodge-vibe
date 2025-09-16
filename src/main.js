@@ -22,12 +22,15 @@ class GameScene extends Phaser.Scene {
         // Create initial view
         this.gameView.create();
 
-        // Spawn chickens periodically
+        // Spawn chickens periodically (faster for testing)
         this.time.addEvent({
-            delay: 2000,
+            delay: 1500,
             callback: () => this.viewModel.spawnChicken(),
             loop: true
         });
+        
+        // Spawn first chicken immediately
+        this.viewModel.spawnChicken();
     }
 
     update() {

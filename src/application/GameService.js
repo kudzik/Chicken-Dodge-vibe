@@ -23,7 +23,8 @@ export class GameService {
         this.chickens.forEach(chicken => {
             if (chicken.active && chicken.checkCollision(this.player)) {
                 chicken.active = false;
-                if (!this.player.takeDamage()) {
+                const stillAlive = this.player.takeDamage();
+                if (!stillAlive) {
                     this.gameRunning = false;
                 }
             }

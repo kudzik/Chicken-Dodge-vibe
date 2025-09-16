@@ -6,7 +6,7 @@ export class GameView {
     }
 
     create() {
-        // Create player placeholder
+        // Create player placeholder (green square)
         this.playerSprite = this.scene.add.rectangle(400, 550, 40, 40, 0x00ff00);
         
         // Create UI text
@@ -19,6 +19,14 @@ export class GameView {
             fontSize: '24px',
             fill: '#000'
         });
+        
+        this.gameOverText = this.scene.add.text(400, 300, '', {
+            fontSize: '32px',
+            fill: '#ff0000',
+            fontFamily: 'Arial'
+        }).setOrigin(0.5);
+        
+        // Static chicken removed - now using dynamic spawning
     }
 
     render(gameState) {
@@ -30,6 +38,11 @@ export class GameView {
         // Update UI
         this.scoreText.setText(`Score: ${gameState.player.score}`);
         this.livesText.setText(`Lives: ${gameState.player.lives}`);
+        
+        // Show game over message
+        if (!gameState.gameRunning) {
+            this.gameOverText.setText('GAME OVER\nPress F5 to restart');
+        }
 
         // Update chickens
         this.updateChickens(gameState.chickens);
@@ -42,9 +55,9 @@ export class GameView {
             sprite.destroy();
         }
 
-        // Add missing sprites
+        // Add missing sprites (orange chickens)
         while (this.chickenSprites.length < chickens.length) {
-            const sprite = this.scene.add.rectangle(0, 0, 30, 30, 0xff0000);
+            const sprite = this.scene.add.rectangle(0, 0, 30, 30, 0xff6600);
             this.chickenSprites.push(sprite);
         }
 
