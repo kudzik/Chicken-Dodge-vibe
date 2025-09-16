@@ -48,3 +48,8 @@
 [2024-12-19 16:30:00] [Dodano] plik docs/API.md - Dokumentacja API klas i metod
 [2024-12-19 16:30:00] [Zmieniono] plik README.md - Dodano linki do dokumentacji i status ukończenia Sprint 1
 [2024-12-19 16:30:00] [Zmieniono] plik TODO.md - Oznaczono ostatni punkt jako wykonany - Sprint 1 ukończony
+[2024-12-19 16:35:00] [Dodano] plik src/domain/FastChicken.js - Nowy typ kurczaka z przyspieszeniem
+[2024-12-19 16:35:00] [Zmieniono] plik src/application/GameService.js - Dodano spawning szybkich kurczaków (30% szans)
+[2024-12-19 16:35:00] [Zmieniono] plik src/presentation/GameView.js - Dodano różne kolory dla typów kurczaków
+[2024-12-19 16:35:00] [Zmieniono] plik src/domain/Chicken.js - Dodano typ 'normal' do podstawowego kurczaka
+[2024-12-19 16:35:00] [Zmieniono] plik TODO.md - Oznaczono pierwszy punkt Sprint 2 jako wykonany

@@ -58,7 +58,7 @@ Sprint 2: Rozszerzenie mechaniki kurczaków, mnożnik i życie
 
 ## Faza 1: Rozszerzenie mechaniki kurczaków
 
-- [ ] ✍️ Zaimplementować spadającego kurczaka szybkiego (z przyspieszeniem w locie)  
+- [x] ✍️ Zaimplementować spadającego kurczaka szybkiego (z przyspieszeniem w locie)  
   ✅ Kurczak pojawia się i przyspiesza podczas spadania, widoczny efekt animacji przyspieszenia  
   ⏱️ ~4h
 

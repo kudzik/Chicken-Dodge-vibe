@@ -92,18 +92,25 @@ export class GameView {
             sprite.destroy();
         }
 
-        // Add missing sprites (orange chickens)
+        // Add missing sprites with different colors for types
         while (this.chickenSprites.length < chickens.length) {
             const sprite = this.scene.add.rectangle(0, 0, 30, 30, 0xff6600);
             this.chickenSprites.push(sprite);
         }
 
-        // Update positions
+        // Update positions and colors based on type
         chickens.forEach((chicken, index) => {
             if (this.chickenSprites[index]) {
                 this.chickenSprites[index].x = chicken.x;
                 this.chickenSprites[index].y = chicken.y;
                 this.chickenSprites[index].setVisible(chicken.active);
+                
+                // Different colors for different types
+                if (chicken.type === 'fast') {
+                    this.chickenSprites[index].setFillStyle(0xff0000); // Red for fast
+                } else {
+                    this.chickenSprites[index].setFillStyle(0xff6600); // Orange for normal
+                }
             }
         });
     }

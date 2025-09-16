@@ -4,6 +4,7 @@ export class Chicken {
         this.y = y;
         this.speed = 3;
         this.active = true;
+        this.type = 'normal';
     }
 
     update() {
